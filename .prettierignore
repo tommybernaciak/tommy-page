@@ -1,0 +1,8 @@
+build/
+dist/
+.vscode/
+package.json
+package-lock.json
+yarn-lock.json
+tsconfig.json
+template.ts
