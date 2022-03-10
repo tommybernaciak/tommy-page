@@ -1,5 +1,5 @@
 import { FunctionComponent, ReactElement } from 'react';
-import Heading from '../components/typography/heading';
+import Heading from '../components/typography/Heading';
 
 const Main: FunctionComponent = (): ReactElement => {
 	return (

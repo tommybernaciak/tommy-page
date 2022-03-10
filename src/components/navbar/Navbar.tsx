@@ -31,6 +31,14 @@ const Navbar: FunctionComponent = (): ReactElement => {
 							About
 						</Link>
 					</li>
+					<li>
+						<Link
+							className=" px-2 py-1.5 rounded-md text-sm flex items-center justify-between text-gray-300 hover:text-gray-200 hover:bg-gray-700 cursor-pointer"
+							to="/blog"
+						>
+							Blog
+						</Link>
+					</li>
 				</ul>
 
 				<div className="flex-1"></div>

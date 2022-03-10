@@ -1,4 +1,4 @@
-import Heading from '../components/typography/heading';
+import Heading from '../components/typography/Heading';
 import P from '../components/typography/P';
 import { about } from '../utils/about';
 
