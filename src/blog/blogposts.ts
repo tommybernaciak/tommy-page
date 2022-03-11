@@ -1,14 +1,14 @@
-import { BlogPostListElement, BlogPostPart, PARTS } from './types';
+import { BlogPostListElement, BlogPostPart, Date, PARTS, Title } from './types';
 import hscroll from './horizontal-scroll-css';
 
 const findTitle = (post: BlogPostPart[]) => {
 	const title = post.find((part: BlogPostPart) => part.type === PARTS.TITLE);
-	return title?.content || '';
+	return (title as Title)?.content || '';
 };
 
 const findDate = (post: BlogPostPart[]) => {
-	const title = post.find((part: BlogPostPart) => part.type === PARTS.DATE);
-	return title?.content || '';
+	const date = post.find((part: BlogPostPart) => part.type === PARTS.DATE);
+	return (date as Date)?.content || '';
 };
 
 export const blogposts: BlogPostListElement[] = [

@@ -14,10 +14,16 @@ const Blog: FunctionComponent = (): ReactElement => {
 								className=" gap-2.5 p-4 rounded-md text-sm flex items-center justify-between text-gray-300 hover:text-gray-200 hover:bg-gray-700 cursor-pointer"
 								to={post.url}
 							>
-								<div className="w-1/5">{post.date}</div>
+								<div className="w-1/5 text-gray-500 text-xs md:text-base">
+									{post.date}
+								</div>
 								<div className="w-4/5 flex flex-col">
-									<div className="text-2xl pb-6 text-gray-300">{post.title}</div>
-									<div className="text-ellipsis">{post.intro}</div>
+									<div className="text-base md:text-2xl md:pb-6 text-gray-300">
+										{post.title}
+									</div>
+									<div className="hidden md:block text-ellipsis">
+										{post.intro}
+									</div>
 								</div>
 							</Link>
 						</li>

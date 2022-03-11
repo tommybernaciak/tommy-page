@@ -1,8 +1,8 @@
 import { BlogPostPart, PARTS } from './types';
 
 const blogpost: BlogPostPart[] = [
-	{ type: PARTS.TITLE, content: 'CSS Horizontal scroll' },
 	{ type: PARTS.DATE, content: 'Feb 19, 2019' },
+	{ type: PARTS.TITLE, content: 'CSS Horizontal scroll' },
 	{
 		type: PARTS.PARAGRAPH,
 		content:
@@ -55,7 +55,48 @@ const blogpost: BlogPostPart[] = [
 		type: PARTS.PARAGRAPH,
 		content:
 			'We can use `inline-block` display property to achieve that. This is a bit old way, from before the flex era and you can it is still used in many applications. What we need to do is allow an overflow on a container and set display to `inline-block` on items. We need however to add one trick here - `inline-block` items will be separated by a small space so we need to apply a negative margin to make then stand next to each other.'
+	},
+	{
+		type: PARTS.CODEBLOCK,
+		language: 'css',
+		content: `
+.inline-container {
+	vertical-align: middle;
+	overflow-x: scroll; 
 	}
+.inline-item {
+	display: inline-block;
+	vertical-align: middle;
+	height: 96px;
+	margin-right: -4px;
+}`
+	},
+	{ type: PARTS.SUBTITLE, content: 'Horizontal scroll with flex' },
+	{
+		type: PARTS.PARAGRAPH,
+		content:
+			"A better solution is using flex. Flex display is one of my favorite things in stylesheet styling and I use it very often. Here we need only to apply flex display property to the container and set `0 0 auto` on items `flex` property. Container settings will display all children in a row and item settings will set them to the same order and grow and will keep them next to each other. We also don't allow to wrap items, so we will keep them in one line only and we allow overflow for scrolling to be possible."
+	},
+	{
+		type: PARTS.CODEBLOCK,
+		language: 'css',
+		content: `
+.flex-container {
+	display: flex;
+	flex-wrap: nowrap; 
+	overflow: auto;
+}
+.flex-item {
+	flex: 0 0 auto;
+}`
+	},
+	{ type: PARTS.SUBTITLE, content: 'Check the example' },
+	{
+		type: PARTS.PARAGRAPH,
+		content:
+			'You can see and test both on my implementations on a Codepen below. I hope this will help you in your implementation.'
+	},
+	{ type: PARTS.CODEPEN, user: 'tommybernaciak-the-reactor', hash: 'YBdrRd' }
 ];
 
 export default blogpost;

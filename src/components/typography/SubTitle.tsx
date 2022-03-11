@@ -5,7 +5,7 @@ interface IProps {
 }
 
 const SubTitle: FunctionComponent<IProps> = ({ text }): ReactElement => {
-	return <p className="text-gray-300 text-2xl pb-6">{text}</p>;
+	return <h2 className="text-gray-300 text-xl md:text-2xl pb-6">{text}</h2>;
 };
 
 export default SubTitle;

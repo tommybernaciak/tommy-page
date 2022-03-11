@@ -6,20 +6,22 @@ export type BlogPostListElement = {
 	content: BlogPostPart[];
 };
 
-export type BlogPostPart = Title | Subtitle | Paragraph | Codeblock | Date;
+export type BlogPostPart = Title | Subtitle | Paragraph | Codeblock | Date | CodePen;
 
 export type Title = { type: PARTS.TITLE; content: string };
 export type Subtitle = { type: PARTS.SUBTITLE; content: string };
 export type Paragraph = { type: PARTS.PARAGRAPH; content: string };
 export type Codeblock = { type: PARTS.CODEBLOCK; content: string; language: SupportedLanguages };
 export type Date = { type: PARTS.DATE; content: string };
+export type CodePen = { type: PARTS.CODEPEN; hash: string; user: string };
 
 export enum PARTS {
 	DATE = 'date',
 	TITLE = 'title',
 	SUBTITLE = 'subtitle',
 	PARAGRAPH = 'paragraph',
-	CODEBLOCK = 'codeblock'
+	CODEBLOCK = 'codeblock',
+	CODEPEN = 'codepen'
 }
 
 export type SupportedLanguages =

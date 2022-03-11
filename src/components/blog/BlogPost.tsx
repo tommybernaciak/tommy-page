@@ -1,9 +1,11 @@
 import { FunctionComponent, ReactElement } from 'react';
 import { CodeBlock, nord } from 'react-code-blocks';
+import Codepen from 'react-codepen-embed';
 import { BlogPostPart, PARTS } from '../../blog/types';
 import Heading from '../typography/Heading';
 import P from '../typography/P';
 import SubTitle from '../typography/SubTitle';
+import Date from '../typography/Date';
 
 interface IProps {
 	blogpost: BlogPostPart[];
@@ -40,6 +42,12 @@ const BlogPost: FunctionComponent<IProps> = ({ blogpost }): ReactElement => {
 								/>
 							</div>
 						);
+					}
+					case PARTS.CODEPEN: {
+						return <Codepen key={i} hash={part.hash} user={part.user} />;
+					}
+					case PARTS.DATE: {
+						return <Date key={i} text={part.content} />;
 					}
 					default: {
 						return <>invalid</>;
