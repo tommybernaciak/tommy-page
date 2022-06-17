@@ -4,7 +4,6 @@ import {
 	faTwitter,
 	faLinkedin,
 	faInstagram,
-	faYoutube,
 	IconDefinition
 } from '@fortawesome/free-brands-svg-icons';
 import { FunctionComponent, ReactElement, useMemo } from 'react';
@@ -51,13 +50,13 @@ const Social: FunctionComponent = (): ReactElement => {
 			{
 				name: 'Instagram',
 				icon: faInstagram,
-				url: 'https://www.linkedin.com/in/tommy-bernaciak/'
-			},
-			{
-				name: 'Youtube',
-				icon: faYoutube,
-				url: 'https://www.linkedin.com/in/tommy-bernaciak/'
+				url: 'https://www.instagram.com/tommy_codes/'
 			}
+			// {
+			// 	name: 'Youtube',
+			// 	icon: faYoutube,
+			// 	url: 'https://www.linkedin.com/in/tommy-bernaciak/'
+			// }
 		];
 	}, []);
 
