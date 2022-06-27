@@ -1,5 +1,6 @@
 import { BlogPostListElement, BlogPostPart, Date, PARTS, Title } from './types';
 import hscroll from './horizontal-scroll-css';
+import usetransition from './use-transition';
 
 const findTitle = (post: BlogPostPart[]) => {
 	const title = post.find((part: BlogPostPart) => part.type === PARTS.TITLE);
@@ -12,6 +13,13 @@ const findDate = (post: BlogPostPart[]) => {
 };
 
 export const blogposts: BlogPostListElement[] = [
+	{
+		title: findTitle(usetransition),
+		url: '/blog/use=transition-react-hook',
+		date: findDate(usetransition),
+		content: usetransition,
+		intro: 'In React all updates have the same priority by default. A heavy and non-urgent task can slow down a task that is light but urgent. With react 18 you can enable the concurrent mode which allows to prioritize UI updates.'
+	},
 	{
 		title: findTitle(hscroll),
 		url: '/blog/horizontal-scroll-css',
