@@ -2,8 +2,8 @@ import { FunctionComponent, ReactElement } from 'react';
 import { CodeBlock, nord } from 'react-code-blocks';
 import Codepen from 'react-codepen-embed';
 import { BlogPostPart, PARTS } from '../../blog/types';
-import Heading from '../typography/Heading';
-import P from '../typography/P';
+import Heading from '../Heading';
+import P from '../P';
 import SubTitle from '../typography/SubTitle';
 import Date from '../typography/Date';
 
