@@ -1,8 +1,10 @@
+import BlogCard from './components/BlogCard';
 import Container from './components/Container';
 import Heading from './components/Heading';
 import P from './components/P';
 import usePageTracking from './hooks/usePageTracking';
 import { about } from './utils/about';
+import { blog, IBlogPost } from './utils/blog';
 
 function App() {
 	usePageTracking();
@@ -18,9 +20,19 @@ function App() {
 					<P text={about.p1} />
 					<P text={about.p2} />
 				</Container>
-				{/* <Container>
+				<Container>
 					<Heading text={'Blog Posts'} />
-				</Container> */}
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+						{blog.map((post: IBlogPost, i: number) => (
+							<BlogCard
+								key={i}
+								title={post.title}
+								date={post.date}
+								href={post.href}
+							></BlogCard>
+						))}
+					</div>
+				</Container>
 			</main>
 		</div>
 	);
