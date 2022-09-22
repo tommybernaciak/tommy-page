@@ -10,7 +10,7 @@ function App() {
 	usePageTracking();
 	return (
 		<div className="flex relative h-full min-h-screen bg-gray-900">
-			<main className="h-screen overflow-y-auto py-20">
+			<main className="h-screen overflow-y-auto py-4 md:py-20">
 				<Container>
 					<Heading text={'Tommy Bernaciak'} />
 					<P text={'Front-end Developer / Team Leader'} />

@@ -11,7 +11,7 @@ interface IProps {
 const BlogCard: FunctionComponent<IProps> = ({ title, date, href }): ReactElement => {
 	return (
 		<a href={href} target="_blank" rel="noreferrer">
-			<div className="bg-gray-800  border-gray-700 shadow-md border rounded-lg w-full md:max-w-sm mb-5 h-24 md:h-36">
+			<div className="bg-gray-800  border-gray-700 shadow-md border rounded-lg w-full md:max-w-sm mb-5 h-28 md:h-32 lg:h-36">
 				<div className="p-4 flex flex-col justify-between h-full">
 					<h5 className="text-white text-xl tracking-tight mb-2">{title}</h5>
 
