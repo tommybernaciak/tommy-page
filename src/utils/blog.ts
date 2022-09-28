@@ -26,6 +26,11 @@ export const blog: IBlogPost[] = [
 		href: 'https://tommybernaciak.hashnode.dev/clean-up-request-in-the-useeffect-react-hook'
 	},
 	{
+		title: 'CSS Horizontal scroll',
+		date: 'Feb 19, 2019',
+		href: 'https://medium.com/@tommybernaciak/css-horizontal-scroll-25625e65af9'
+	},
+	{
 		title: 'Image Optimization — Lazy Loading for Angular using lazysizes',
 		date: 'Aug 22, 2018',
 		href: 'https://medium.com/@tommybernaciak/image-optimization-lazy-loading-for-angular-using-lazysizes-1b8a1fb8e1f8'
