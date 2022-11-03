@@ -6,6 +6,11 @@ export interface IBlogPost {
 
 export const blog: IBlogPost[] = [
 	{
+		title: 'JS shorts: const, let and var',
+		date: 'Nov 2, 2022',
+		href: 'https://tommybernaciak.hashnode.dev/js-shorts-const-let-and-var'
+	},
+	{
 		title: 'useTransition() React hook',
 		date: 'Jun 27, 2022',
 		href: 'https://tommybernaciak.hashnode.dev/usetransition-react-hook'
